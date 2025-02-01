@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Cinema</string>
+
+    <!-- Общие строки -->
+    <string name="empty_data">Рейтинг: Нет данных\n</string>
+    <string name="unknown_year">Год неизвестен</string>
+    <string name="unknown_duration">Длительность неизвестна</string>
+
+    <!-- Movie Details -->
+    <string name="movie_poster">Постер</string>
+    <string name="movie_title">Название</string>
+    <string name="movie_genres">Жанры: %1$s</string>
+    <string name="movie_countries">Страны: %1$s</string>
+    <string name="rating_format">Рейтинг: %.1f</string>
+    <string name="movie_duration">Длительность: %1$d мин.</string>
+    <string name="movie_year">Год выпуска: %1$d</string>
+    <string name="movie_description">Описание</string>
+</resources>

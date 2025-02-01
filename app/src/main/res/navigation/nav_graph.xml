@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cinema.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_allMovies"
+            app:destination="@id/allMoviesFragment" />
+        <action
+            android:id="@+id/action_home_to_MovieDetails"
+            app:destination="@id/movieDetailsFragment">
+            <argument
+                android:name="movieId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.cinema.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_movieDetails"
+            app:destination="@id/movieDetailsFragment">
+            <argument
+                android:name="movieId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_searchFragment_to_searchSettingsFragment"
+            app:destination="@id/searchSettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.cinema.profile.ProfileFragment"
+        android:label="Profile" />
+
+    <fragment
+        android:id="@+id/allMoviesFragment"
+        android:name="com.example.cinema.movies.AllMoviesFragment"
+        android:label="All Movies"
+        tools:layout="@layout/fragment_all_movies">
+        <action
+            android:id="@+id/action_allMovies_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_allMovies_to_movieDetails"
+            app:destination="@id/movieDetailsFragment">
+            <argument
+                android:name="movieId"
+                app:argType="integer" />
+        </action>
+        <argument
+            android:name="sectionTitle"
+            app:argType="string" />
+        <argument
+            android:name="countryId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="genreId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.cinema.movies.MovieDetailsFragment"
+        android:label="Movie Details">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchSettingsFragment"
+        android:name="com.example.cinema.search.SearchSettingsFragment"
+        android:label="Search Settings"
+        tools:layout="@layout/fragment_search_settings" />
+</navigation>

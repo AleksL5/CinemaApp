@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movieItemLayout"
+    android:layout_width="165dp"
+    android:layout_height="350dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/moviePoster"
+        android:layout_width="155dp"
+        android:layout_height="190dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/image_placeholder"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="Фильм" />
+
+    <TextView
+        android:id="@+id/movieGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:textColor="#80000000"
+        tools:text="Жанр" />
+</LinearLayout>
