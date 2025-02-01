@@ -15,7 +15,7 @@ object ApiClient {
         .addInterceptor(loggingInterceptor)
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("X-API-KEY", "2d67dec3-d8b9-427b-9a35-e6cd974d3a94")
+                .addHeader("X-API-KEY", "---KEY---")
                 .build()
             chain.proceed(request)
         }
